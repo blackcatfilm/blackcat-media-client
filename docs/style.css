@@ -55,6 +55,12 @@ a {
   text-decoration: none;
 }
 
+pre {
+  margin: 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
 .container {
   width: min(var(--max), calc(100% - 40px));
   margin: 0 auto;
@@ -181,7 +187,10 @@ a {
 .feature-card p,
 .platform-card p,
 .process-item p,
-.footer p {
+.footer p,
+.release-status,
+.release-notes,
+.release-date {
   color: var(--muted);
 }
 
@@ -192,7 +201,8 @@ a {
 }
 
 .hero-actions,
-.final-actions {
+.final-actions,
+.release-actions {
   display: flex;
   gap: 14px;
   flex-wrap: wrap;
@@ -292,7 +302,8 @@ a {
 .feature-card,
 .platform-card,
 .gallery-card,
-.final-cta-box {
+.final-cta-box,
+.release-box {
   background: var(--panel);
   border: 1px solid var(--line);
   backdrop-filter: var(--blur);
@@ -357,6 +368,55 @@ a {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 20px;
   margin-top: 30px;
+}
+
+.release-box {
+  border-radius: 28px;
+  padding: 28px;
+  margin-top: 24px;
+}
+
+.release-status {
+  font-size: 15px;
+}
+
+.release-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.release-version-label,
+.release-date-label,
+.release-notes-label {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #d7e2ee;
+  margin-bottom: 8px;
+}
+
+.release-version {
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.release-notes-wrap {
+  margin-top: 18px;
+}
+
+.release-notes {
+  margin-top: 8px;
+  padding: 18px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--line);
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1.7;
 }
 
 .process-list {
@@ -480,5 +540,9 @@ a {
 
   .brand-name {
     display: none;
+  }
+
+  .release-top {
+    flex-direction: column;
   }
 }
