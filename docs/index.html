@@ -1,232 +1,285 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BlackCat Media Client</title>
-  <meta name="description" content="BlackCat Media official client download page for Windows and Android." />
-  <meta name="theme-color" content="#0b0f14" />
-  <link rel="stylesheet" href="./style.css" />
+  <meta name="description" content="BlackCat Media 官方客户端发布页，支持 Windows、Android、Android TV 下载。" />
+  <meta name="theme-color" content="#06080d" />
   <link rel="icon" href="./favicon.png" />
+  <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
-  <header class="hero">
-    <div class="overlay"></div>
-    <div class="container hero-content">
-      <div class="brand-row">
-        <img src="../assets/logo.png" alt="BlackCat Media Logo" class="logo" />
-        <div class="brand-text">
-          <span class="eyebrow">Official Client Release</span>
-          <h1>BlackCat Media Client</h1>
-          <p class="subtitle">
-            A modern streaming client for Windows and Android, designed for a smooth,
-            elegant, and premium media experience.
-          </p>
-        </div>
-      </div>
+  <div class="page-bg"></div>
 
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="https://github.com/blackcatfilm/blackcat-media-client/releases/latest" target="_blank" rel="noopener noreferrer">
-          Download Latest Release
-        </a>
-        <a class="btn btn-secondary" href="https://github.com/blackcatfilm/blackcat-media-client" target="_blank" rel="noopener noreferrer">
-          View on GitHub
-        </a>
-      </div>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="#">
+        <img src="../assets/logo.png" alt="BlackCat Media Logo" class="brand-logo" />
+        <span class="brand-name">BlackCat Media</span>
+      </a>
 
-      <div class="hero-badges">
-        <span>Windows</span>
-        <span>Android</span>
-        <span>Android TV</span>
-        <span>Modern UI</span>
-        <span>Resume Playback</span>
-        <span>Subtitle Support</span>
+      <nav class="topnav">
+        <a href="#overview" data-i18n="nav_overview">概览</a>
+        <a href="#features" data-i18n="nav_features">功能</a>
+        <a href="#screenshots" data-i18n="nav_screenshots">截图</a>
+        <a href="#download" data-i18n="nav_download">下载</a>
+      </nav>
+
+      <div class="topbar-actions">
+        <button id="langToggle" class="lang-btn">EN</button>
+        <a class="github-link" href="https://github.com/blackcatfilm/blackcat-media-client" target="_blank" rel="noopener noreferrer">
+          GitHub
+        </a>
       </div>
     </div>
   </header>
 
   <main>
-    <section class="section">
-      <div class="container">
-        <div class="section-head">
-          <span class="section-tag">Overview</span>
-          <h2>Built for a Better Viewing Experience</h2>
-          <p>
-            BlackCat Media Client combines a clean visual design with practical features
-            such as favorites, search, continue watching, subtitle compatibility,
-            and multi-platform support.
+    <section class="hero section-first">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <div class="hero-tag" data-i18n="hero_tag">官方客户端发布页</div>
+          <h1 data-i18n="hero_title">BlackCat Media Client</h1>
+          <p class="hero-subtitle" data-i18n="hero_subtitle">
+            为 Windows、Android 与 Android TV 打造的现代化流媒体客户端，
+            更干净的界面，更流畅的浏览，更沉浸的观影体验。
           </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://github.com/blackcatfilm/blackcat-media-client/releases/latest" target="_blank" rel="noopener noreferrer" data-i18n="hero_btn_download">
+              下载最新版本
+            </a>
+            <a class="btn btn-secondary" href="https://github.com/blackcatfilm/blackcat-media-client/releases" target="_blank" rel="noopener noreferrer" data-i18n="hero_btn_releases">
+              查看版本更新
+            </a>
+          </div>
+
+          <div class="hero-meta">
+            <span data-i18n="hero_meta_1">Windows / Android / Android TV</span>
+            <span data-i18n="hero_meta_2">深色高级界面</span>
+            <span data-i18n="hero_meta_3">继续观看 / 收藏 / 搜索</span>
+          </div>
         </div>
 
+        <div class="hero-visual">
+          <div class="device device-large">
+            <img src="../assets/hero-poster.jpg" alt="BlackCat Media Hero Preview" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="overview" class="section intro-section">
+      <div class="container narrow">
+        <div class="section-kicker" data-i18n="overview_kicker">产品概览</div>
+        <h2 class="section-title" data-i18n="overview_title">
+          更像一款真正成品化的媒体客户端
+        </h2>
+        <p class="section-desc" data-i18n="overview_desc">
+          BlackCat Media Client 不只是一个下载入口，更是一套围绕影视浏览、播放、
+          继续观看、收藏、字幕兼容与多端使用体验而打造的完整客户端方案。
+        </p>
+      </div>
+    </section>
+
+    <section id="features" class="section feature-section">
+      <div class="container">
         <div class="feature-grid">
-          <div class="card">
-            <h3>Elegant Interface</h3>
-            <p>Apple-TV inspired visual style with a dark, modern, premium layout.</p>
-          </div>
-          <div class="card">
-            <h3>Cross-Platform</h3>
-            <p>Available for Windows, Android, and Android TV use cases.</p>
-          </div>
-          <div class="card">
-            <h3>Resume Playback</h3>
-            <p>Continue watching from where you left off with a smoother playback flow.</p>
-          </div>
-          <div class="card">
-            <h3>Favorites & Search</h3>
-            <p>Find content faster and keep your favorite items organized.</p>
-          </div>
-          <div class="card">
-            <h3>Subtitle Compatibility</h3>
-            <p>Improved subtitle handling for a more reliable playback experience.</p>
-          </div>
-          <div class="card">
-            <h3>Optimized Experience</h3>
-            <p>Designed for fast access, cleaner navigation, and stable daily use.</p>
-          </div>
+          <article class="feature-card">
+            <div class="feature-label" data-i18n="feature_label_1">界面体验</div>
+            <h3 data-i18n="feature_title_1">Apple TV 风格视觉语言</h3>
+            <p data-i18n="feature_desc_1">
+              深色背景、沉浸式排版、更克制的层次与更高级的观感，适合作为品牌级客户端展示。
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-label" data-i18n="feature_label_2">跨平台</div>
+            <h3 data-i18n="feature_title_2">多平台统一体验</h3>
+            <p data-i18n="feature_desc_2">
+              支持 Windows、Android 与 Android TV，保持一致的核心逻辑与视觉风格。
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-label" data-i18n="feature_label_3">播放逻辑</div>
+            <h3 data-i18n="feature_title_3">继续观看与更顺滑的播放流程</h3>
+            <p data-i18n="feature_desc_3">
+              围绕“继续观看”“详情进入播放”“历史进度恢复”等高频路径优化使用体验。
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-label" data-i18n="feature_label_4">内容管理</div>
+            <h3 data-i18n="feature_title_4">收藏、搜索与快速定位</h3>
+            <p data-i18n="feature_desc_4">
+              更方便地查找影片、管理收藏内容，并快速返回上次观看的内容入口。
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-label" data-i18n="feature_label_5">字幕兼容</div>
+            <h3 data-i18n="feature_title_5">更好的字幕支持能力</h3>
+            <p data-i18n="feature_desc_5">
+              面向更多字幕场景做兼容优化，让日常播放与多语言内容观看更稳定。
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-label" data-i18n="feature_label_6">扩展能力</div>
+            <h3 data-i18n="feature_title_6">适合长期迭代的客户端发布中心</h3>
+            <p data-i18n="feature_desc_6">
+              可持续承接版本更新、Release 说明、截图展示与多平台安装包下载分发。
+            </p>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section alt">
+    <section id="screenshots" class="section gallery-section">
       <div class="container">
-        <div class="section-head">
-          <span class="section-tag">Screenshots</span>
-          <h2>Preview the Client</h2>
-          <p>Replace these screenshots with your real BlackCat Media client images.</p>
-        </div>
+        <div class="section-kicker" data-i18n="gallery_kicker">客户端预览</div>
+        <h2 class="section-title" data-i18n="gallery_title">看看 BlackCat Media Client 的实际界面</h2>
 
-        <div class="screenshot-grid">
-          <div class="shot-card">
-            <img src="../assets/screenshot-home.jpg" alt="BlackCat Media Home Page" />
-            <div class="shot-caption">Home</div>
-          </div>
-          <div class="shot-card">
-            <img src="../assets/screenshot-detail.jpg" alt="BlackCat Media Detail Page" />
-            <div class="shot-caption">Detail</div>
-          </div>
-          <div class="shot-card">
-            <img src="../assets/screenshot-player.jpg" alt="BlackCat Media Player" />
-            <div class="shot-caption">Player</div>
-          </div>
-          <div class="shot-card">
-            <img src="../assets/screenshot-login.jpg" alt="BlackCat Media Login" />
-            <div class="shot-caption">Login</div>
-          </div>
+        <div class="gallery-grid">
+          <figure class="gallery-card large">
+            <img src="../assets/screenshot-home.jpg" alt="Home Page" />
+            <figcaption data-i18n="gallery_caption_1">首页 Home</figcaption>
+          </figure>
+
+          <figure class="gallery-card">
+            <img src="../assets/screenshot-detail.jpg" alt="Detail Page" />
+            <figcaption data-i18n="gallery_caption_2">详情页 Detail</figcaption>
+          </figure>
+
+          <figure class="gallery-card">
+            <img src="../assets/screenshot-player.jpg" alt="Player Page" />
+            <figcaption data-i18n="gallery_caption_3">播放器 Player</figcaption>
+          </figure>
+
+          <figure class="gallery-card">
+            <img src="../assets/screenshot-login.jpg" alt="Login Page" />
+            <figcaption data-i18n="gallery_caption_4">登录页 Login</figcaption>
+          </figure>
         </div>
       </div>
     </section>
 
-    <section class="section">
+    <section id="download" class="section download-section">
       <div class="container">
-        <div class="section-head">
-          <span class="section-tag">Downloads</span>
-          <h2>Get the Latest Version</h2>
-          <p>
-            Use the release page to download the newest Windows or Android version,
-            read update notes, and check changes between versions.
-          </p>
-        </div>
+        <div class="section-kicker" data-i18n="download_kicker">下载与发布</div>
+        <h2 class="section-title" data-i18n="download_title">获取最新版本</h2>
+        <p class="section-desc narrow-text" data-i18n="download_desc">
+          你可以通过 GitHub Releases 下载最新 Windows 客户端、Android APK，
+          同时查看每个版本的更新内容、修复项与历史版本记录。
+        </p>
 
-        <div class="download-grid">
-          <div class="download-card">
-            <h3>Windows</h3>
-            <p>Recommended for desktop users on Windows 10/11.</p>
-            <a class="btn btn-primary block" href="https://github.com/blackcatfilm/blackcat-media-client/releases/latest" target="_blank" rel="noopener noreferrer">
-              Download for Windows
+        <div class="platform-grid">
+          <div class="platform-card">
+            <div class="platform-name">Windows</div>
+            <p data-i18n="platform_desc_windows">适合桌面端用户，推荐用于 Windows 10 / 11。</p>
+            <a class="btn btn-primary btn-block" href="https://github.com/blackcatfilm/blackcat-media-client/releases/latest" target="_blank" rel="noopener noreferrer" data-i18n="platform_btn_windows">
+              下载 Windows 版本
             </a>
           </div>
 
-          <div class="download-card">
-            <h3>Android</h3>
-            <p>Install the latest APK for Android phones, tablets, or TV devices.</p>
-            <a class="btn btn-primary block" href="https://github.com/blackcatfilm/blackcat-media-client/releases/latest" target="_blank" rel="noopener noreferrer">
-              Download APK
+          <div class="platform-card">
+            <div class="platform-name">Android</div>
+            <p data-i18n="platform_desc_android">适合安卓手机、平板与部分电视设备安装使用。</p>
+            <a class="btn btn-primary btn-block" href="https://github.com/blackcatfilm/blackcat-media-client/releases/latest" target="_blank" rel="noopener noreferrer" data-i18n="platform_btn_android">
+              下载 Android APK
             </a>
           </div>
 
-          <div class="download-card">
-            <h3>Releases</h3>
-            <p>View changelogs, release notes, fixes, and full version history.</p>
-            <a class="btn btn-secondary block" href="https://github.com/blackcatfilm/blackcat-media-client/releases" target="_blank" rel="noopener noreferrer">
-              View All Releases
+          <div class="platform-card">
+            <div class="platform-name">Releases</div>
+            <p data-i18n="platform_desc_releases">查看完整更新日志、版本历史与当前发布包。</p>
+            <a class="btn btn-secondary btn-block" href="https://github.com/blackcatfilm/blackcat-media-client/releases" target="_blank" rel="noopener noreferrer" data-i18n="platform_btn_releases">
+              打开 Release 页面
             </a>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section alt">
-      <div class="container">
-        <div class="section-head">
-          <span class="section-tag">Publish Workflow</span>
-          <h2>Recommended Release Process</h2>
-        </div>
+    <section class="section process-section">
+      <div class="container narrow">
+        <div class="section-kicker" data-i18n="process_kicker">发布流程</div>
+        <h2 class="section-title" data-i18n="process_title">适合长期维护的标准发版方式</h2>
 
-        <div class="timeline">
-          <div class="timeline-item">
-            <span class="step">01</span>
+        <div class="process-list">
+          <div class="process-item">
+            <span>01</span>
             <div>
-              <h3>Build the Client</h3>
-              <p>Package your Windows and Android client builds locally.</p>
+              <h3 data-i18n="process_title_1">打包客户端</h3>
+              <p data-i18n="process_desc_1">生成 Windows 安装包、便携包或 Android / Android TV APK。</p>
             </div>
           </div>
-          <div class="timeline-item">
-            <span class="step">02</span>
+
+          <div class="process-item">
+            <span>02</span>
             <div>
-              <h3>Create a GitHub Release</h3>
-              <p>Create a new tag and write release notes for the new version.</p>
+              <h3 data-i18n="process_title_2">创建 GitHub Release</h3>
+              <p data-i18n="process_desc_2">设置版本号、标题与更新日志说明。</p>
             </div>
           </div>
-          <div class="timeline-item">
-            <span class="step">03</span>
+
+          <div class="process-item">
+            <span>03</span>
             <div>
-              <h3>Upload Assets</h3>
-              <p>Upload the installer, portable package, and APK files.</p>
+              <h3 data-i18n="process_title_3">上传安装包</h3>
+              <p data-i18n="process_desc_3">上传 exe、zip、apk 等对应平台文件。</p>
             </div>
           </div>
-          <div class="timeline-item">
-            <span class="step">04</span>
+
+          <div class="process-item">
+            <span>04</span>
             <div>
-              <h3>Share the Link</h3>
-              <p>Distribute the latest release page to blog posts, Telegram, and your website.</p>
+              <h3 data-i18n="process_title_4">同步对外渠道</h3>
+              <p data-i18n="process_desc_4">将下载页或最新 Release 链接同步到博客、TG、官网等入口。</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section cta-section">
-      <div class="container cta-box">
+    <section class="section final-cta">
+      <div class="container final-cta-box">
         <div>
-          <span class="section-tag">Official Download</span>
-          <h2>Ready to Use BlackCat Media Client?</h2>
-          <p>
-            Download the latest release and experience a cleaner, faster, and more polished media client.
+          <div class="section-kicker" data-i18n="cta_kicker">Official Download</div>
+          <h2 data-i18n="cta_title">现在就开始使用 BlackCat Media Client</h2>
+          <p data-i18n="cta_desc">
+            下载最新版本，体验更现代、更稳定、也更适合长期使用的 BlackCat Media 客户端。
           </p>
         </div>
-        <div class="cta-actions">
-          <a class="btn btn-primary" href="https://github.com/blackcatfilm/blackcat-media-client/releases/latest" target="_blank" rel="noopener noreferrer">
-            Get Latest Release
+
+        <div class="final-actions">
+          <a class="btn btn-primary" href="https://github.com/blackcatfilm/blackcat-media-client/releases/latest" target="_blank" rel="noopener noreferrer" data-i18n="cta_btn_download">
+            下载最新版本
           </a>
-          <a class="btn btn-secondary" href="https://github.com/blackcatfilm/blackcat-media-client/releases" target="_blank" rel="noopener noreferrer">
-            Release Notes
+          <a class="btn btn-secondary" href="https://github.com/blackcatfilm/blackcat-media-client" target="_blank" rel="noopener noreferrer" data-i18n="cta_btn_github">
+            打开 GitHub
           </a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
+  <footer class="footer">
     <div class="container footer-inner">
       <div>
-        <strong>BlackCat Media Client</strong>
-        <p>Official client release page for Windows and Android.</p>
+        <div class="footer-brand">BlackCat Media Client</div>
+        <p data-i18n="footer_desc">官方客户端发布页，用于统一管理下载、版本与更新说明。</p>
       </div>
+
       <div class="footer-links">
         <a href="https://github.com/blackcatfilm/blackcat-media-client" target="_blank" rel="noopener noreferrer">GitHub</a>
         <a href="https://github.com/blackcatfilm/blackcat-media-client/releases" target="_blank" rel="noopener noreferrer">Releases</a>
       </div>
     </div>
   </footer>
+
+  <script src="./app.js"></script>
 </body>
 </html>
