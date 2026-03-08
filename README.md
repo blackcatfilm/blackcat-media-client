@@ -1,28 +1,19 @@
 # BlackCat Media Client
 
-BlackCat Media 官方客户端发布仓库。
-
-BlackCat Media Client is the official client release repository for BlackCat Media, providing Windows and Android builds with a modern streaming experience.
-
----
-
-## Overview
-
-BlackCat Media Client is designed for users who want a clean, fast, and premium media experience across multiple platforms.
-
-It focuses on:
-
-- Modern Apple-TV style interface
-- Windows and Android support
-- Resume playback
-- Favorites and search
-- Better subtitle compatibility
-- Smooth playback experience
-- Multi-node switching support
+BlackCat Media 官方客户端发布仓库。  
+Official release repository for BlackCat Media Client.
 
 ---
 
-## Supported Platforms
+## 简介 | Overview
+
+BlackCat Media Client 是 BlackCat Media 的官方客户端发布仓库，提供 Windows、Android 与 Android TV 版本下载，并作为统一的版本更新与发布入口。
+
+BlackCat Media Client is the official client release repository for BlackCat Media, providing downloads for Windows, Android, and Android TV, along with centralized release notes and version history.
+
+---
+
+## 支持平台 | Supported Platforms
 
 - Windows
 - Android
@@ -30,124 +21,38 @@ It focuses on:
 
 ---
 
-## Key Features
+## 功能亮点 | Key Features
 
-- Elegant dark UI
-- Home page content discovery
-- Favorites management
-- Search support
-- Continue watching / resume playback
-- Subtitle compatibility improvements
-- Optimized streaming experience
-- Node / line switching support
-- Better detail page and playback experience
+- 现代化深色界面 / Modern dark UI
+- Apple TV 风格视觉体验 / Apple-TV inspired visual experience
+- 多平台支持 / Cross-platform support
+- 收藏与搜索 / Favorites and search
+- 继续观看 / Continue watching
+- 字幕兼容优化 / Improved subtitle compatibility
+- 更稳定的播放体验 / More stable playback experience
+- 节点 / 线路切换支持 / Node switching support
 
 ---
 
-## Download
+## 下载 | Download
 
 - [Latest Release](../../releases/latest)
-- [Project Download Page](https://YOUR_GITHUB_USERNAME.github.io/blackcat-media-client/)
-
-> Please replace `YOUR_GITHUB_USERNAME` with your actual GitHub username.
+- [Project Download Page](https://blackcatfilm.github.io/blackcat-media-client/)
 
 ---
 
-## Release Notes
+## 说明 | Notes
 
-Each new version will be published under the **Releases** section.
-
-Typical release contents include:
-
-- Windows installer / package
-- Android APK
-- Update notes
-- Bug fixes
-- Performance improvements
+该仓库可以作为 BlackCat Media Client 的官方公开发布渠道。  
+This repository can serve as the official public release channel for BlackCat Media Client.
 
 ---
 
-## File Naming Suggestion
+## 联系方式 | Contact
 
-Recommended naming convention for release assets:
+你可以在这里添加：
 
-- `BlackCatMedia-Windows-x64.exe`
-- `BlackCatMedia-Windows-Portable.zip`
-- `BlackCatMedia-Android-arm64.apk`
-- `BlackCatMedia-AndroidTV-arm64.apk`
-
-This makes it easier to maintain stable latest-download links.
-
----
-
-## Screenshots
-
-Screenshots can be placed in the `assets/` directory and shown on the GitHub Pages download page.
-
-Suggested screenshots:
-
-- Home page
-- Detail page
-- Player page
-- Login page
-
----
-
-## GitHub Pages
-
-This repository is designed to work with GitHub Pages.
-
-The download page files are stored in the `docs/` directory.
-
-To enable Pages:
-
-1. Open repository **Settings**
-2. Go to **Pages**
-3. Under **Build and deployment**
-4. Select **Deploy from a branch**
-5. Choose branch: `main`
-6. Choose folder: `/docs`
-7. Save
-
-After that, your page will be available at:
-
-`https://YOUR_GITHUB_USERNAME.github.io/blackcat-media-client/`
-
----
-
-## Releases Workflow
-
-Recommended publishing workflow:
-
-1. Build Windows package
-2. Build Android APK
-3. Create a new GitHub Release
-4. Upload release assets
-5. Update release notes
-6. Publish release
-7. Share the latest release link in your blog / Telegram / website
-
----
-
-## Notes
-
-- This repository can be used as the official public release channel for BlackCat Media Client.
-- For private testing, you may choose to keep the repository private first.
-- For public distribution, set the repository visibility to **Public**.
-
----
-
-## Contact / Community
-
-You can add your official channels here, for example:
-
-- Official Website
-- Telegram Channel
-- Blog
-- Support Contact
-
----
-
-## Disclaimer
-
-BlackCat Media Client is provided as-is. Please use the software in accordance with your local laws, platform policies, and service terms.
+- Official Website https://blackcatfilm.cc
+- Telegram Channel https://t.me/blackcatfilm
+- Blog https://b.blackcatfilm.cc
+- Support Contact 
