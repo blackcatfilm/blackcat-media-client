@@ -1,5 +1,5 @@
 # BlackCat Media Client
-
+![BlackCat Logo](assets/logo.png)
 BlackCat Media 官方客户端发布仓库。  
 Official release repository for BlackCat Media Client.
 
