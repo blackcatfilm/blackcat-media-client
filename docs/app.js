@@ -4,6 +4,7 @@ const translations = {
     nav_features: "功能",
     nav_screenshots: "截图",
     nav_download: "下载",
+    nav_releases: "版本",
 
     hero_tag: "官方客户端发布页",
     hero_title: "BlackCat Media Client",
@@ -60,8 +61,18 @@ const translations = {
     platform_btn_windows: "下载 Windows 版本",
     platform_desc_android: "适合安卓手机、平板与部分电视设备安装使用。",
     platform_btn_android: "下载 Android APK",
-    platform_desc_releases: "查看完整更新日志、版本历史与当前发布包。",
-    platform_btn_releases: "打开 Release 页面",
+    platform_desc_android_tv: "适合电视与遥控器交互场景，专注大屏体验。",
+    platform_btn_android_tv: "下载 Android TV 版本",
+
+    release_kicker: "Latest Release",
+    release_title: "最新版本信息",
+    release_desc: "页面会自动读取 GitHub 上最新 Release 的版本号、发布时间和更新摘要。",
+    release_loading: "正在读取最新版本信息...",
+    release_version_label: "版本号",
+    release_date_label: "发布时间",
+    release_notes_label: "更新摘要",
+    release_btn_latest: "下载最新版本",
+    release_btn_all: "查看全部 Releases",
 
     process_kicker: "发布流程",
     process_title: "适合长期维护的标准发版方式",
@@ -88,6 +99,7 @@ const translations = {
     nav_features: "Features",
     nav_screenshots: "Screenshots",
     nav_download: "Download",
+    nav_releases: "Releases",
 
     hero_tag: "Official Client Release Page",
     hero_title: "BlackCat Media Client",
@@ -144,8 +156,18 @@ const translations = {
     platform_btn_windows: "Download for Windows",
     platform_desc_android: "Suitable for Android phones, tablets, and selected TV devices.",
     platform_btn_android: "Download Android APK",
-    platform_desc_releases: "View full release notes, version history, and current packages.",
-    platform_btn_releases: "Open Releases",
+    platform_desc_android_tv: "Designed for TV and remote-control usage with a more focused large-screen experience.",
+    platform_btn_android_tv: "Download Android TV Build",
+
+    release_kicker: "Latest Release",
+    release_title: "Latest Version Information",
+    release_desc: "This section automatically reads the latest release version, publish date, and summary from GitHub.",
+    release_loading: "Loading latest release information...",
+    release_version_label: "Version",
+    release_date_label: "Published",
+    release_notes_label: "Release Summary",
+    release_btn_latest: "Download Latest Release",
+    release_btn_all: "View All Releases",
 
     process_kicker: "Workflow",
     process_title: "A Standard Release Flow for Long-Term Maintenance",
@@ -186,10 +208,60 @@ function setLanguage(lang) {
   localStorage.setItem("blackcat_lang", lang);
 }
 
+function formatDate(dateStr) {
+  const date = new Date(dateStr);
+  if (Number.isNaN(date.getTime())) return dateStr;
+  return date.toLocaleDateString(document.documentElement.lang === "zh-CN" ? "zh-CN" : "en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric"
+  });
+}
+
+async function loadLatestRelease() {
+  const statusEl = document.getElementById("releaseStatus");
+  const mainEl = document.getElementById("releaseMain");
+  const versionEl = document.getElementById("releaseVersion");
+  const dateEl = document.getElementById("releaseDate");
+  const notesEl = document.getElementById("releaseNotes");
+  const latestBtn = document.getElementById("releaseLatestBtn");
+  const allBtn = document.getElementById("releaseAllBtn");
+
+  try {
+    const response = await fetch("https://api.github.com/repos/blackcatfilm/blackcat-media-client/releases/latest");
+    if (!response.ok) {
+      throw new Error(`GitHub API error: ${response.status}`);
+    }
+
+    const data = await response.json();
+    const version = data.name || data.tag_name || "Latest";
+    const publishedAt = data.published_at ? formatDate(data.published_at) : "-";
+    const body = (data.body || "").trim();
+
+    versionEl.textContent = version;
+    dateEl.textContent = publishedAt;
+    notesEl.textContent = body ? body.slice(0, 2500) : (document.documentElement.lang === "zh-CN" ? "暂无更新摘要。" : "No release summary available.");
+
+    latestBtn.href = data.html_url || "https://github.com/blackcatfilm/blackcat-media-client/releases/latest";
+    allBtn.href = "https://github.com/blackcatfilm/blackcat-media-client/releases";
+
+    statusEl.style.display = "none";
+    mainEl.style.display = "block";
+  } catch (error) {
+    statusEl.textContent = document.documentElement.lang === "zh-CN"
+      ? "暂时无法读取 GitHub 最新版本信息，请直接打开 Releases 页面查看。"
+      : "Unable to load the latest GitHub release right now. Please open the Releases page directly.";
+    mainEl.style.display = "none";
+  }
+}
+
 const savedLang = localStorage.getItem("blackcat_lang") || "zh";
 setLanguage(savedLang);
+loadLatestRelease();
 
 langToggle.addEventListener("click", () => {
   const current = localStorage.getItem("blackcat_lang") || "zh";
-  setLanguage(current === "zh" ? "en" : "zh");
+  const next = current === "zh" ? "en" : "zh";
+  setLanguage(next);
+  loadLatestRelease();
 });
