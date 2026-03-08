@@ -17,6 +17,18 @@ BlackCat Media Client is the official client release repository for BlackCat Med
 ## 支持平台 | Supported Platforms
 
 - Windows
+<p align="center">
+  <img src="assets/1.jpg" alt="BlackCat Media Home" width="48%" />
+  <img src="assets/2.jpg" alt="BlackCat Media Detail" width="48%" />
+</p>
+<p align="center">
+  <img src="assets/3.jpg" alt="BlackCat Media Home" width="48%" />
+  <img src="assets/4.jpg" alt="BlackCat Media Detail" width="48%" />
+</p>
+<p align="center">
+  <img src="assets/5.jpg" alt="BlackCat Media Home" width="48%" />
+  <img src="assets/6.jpg" alt="BlackCat Media Detail" width="48%" />
+</p>
 - Android
 - Android TV
 
