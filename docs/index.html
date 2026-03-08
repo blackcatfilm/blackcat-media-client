@@ -24,6 +24,7 @@
         <a href="#features" data-i18n="nav_features">功能</a>
         <a href="#screenshots" data-i18n="nav_screenshots">截图</a>
         <a href="#download" data-i18n="nav_download">下载</a>
+        <a href="#releases" data-i18n="nav_releases">版本</a>
       </nav>
 
       <div class="topbar-actions">
@@ -193,11 +194,52 @@
           </div>
 
           <div class="platform-card">
-            <div class="platform-name">Releases</div>
-            <p data-i18n="platform_desc_releases">查看完整更新日志、版本历史与当前发布包。</p>
-            <a class="btn btn-secondary btn-block" href="https://github.com/blackcatfilm/blackcat-media-client/releases" target="_blank" rel="noopener noreferrer" data-i18n="platform_btn_releases">
-              打开 Release 页面
+            <div class="platform-name">Android TV</div>
+            <p data-i18n="platform_desc_android_tv">适合电视与遥控器交互场景，专注大屏体验。</p>
+            <a class="btn btn-secondary btn-block" href="https://github.com/blackcatfilm/blackcat-media-client/releases/latest" target="_blank" rel="noopener noreferrer" data-i18n="platform_btn_android_tv">
+              下载 Android TV 版本
             </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="releases" class="section release-section">
+      <div class="container">
+        <div class="section-kicker" data-i18n="release_kicker">Latest Release</div>
+        <h2 class="section-title" data-i18n="release_title">最新版本信息</h2>
+        <p class="section-desc narrow-text" data-i18n="release_desc">
+          页面会自动读取 GitHub 上最新 Release 的版本号、发布时间和更新摘要。
+        </p>
+
+        <div class="release-box">
+          <div class="release-status" id="releaseStatus" data-i18n="release_loading">正在读取最新版本信息...</div>
+
+          <div class="release-main" id="releaseMain" style="display:none;">
+            <div class="release-top">
+              <div>
+                <div class="release-version-label" data-i18n="release_version_label">版本号</div>
+                <div class="release-version" id="releaseVersion">-</div>
+              </div>
+              <div>
+                <div class="release-date-label" data-i18n="release_date_label">发布时间</div>
+                <div class="release-date" id="releaseDate">-</div>
+              </div>
+            </div>
+
+            <div class="release-notes-wrap">
+              <div class="release-notes-label" data-i18n="release_notes_label">更新摘要</div>
+              <pre class="release-notes" id="releaseNotes"></pre>
+            </div>
+
+            <div class="release-actions">
+              <a class="btn btn-primary" id="releaseLatestBtn" href="https://github.com/blackcatfilm/blackcat-media-client/releases/latest" target="_blank" rel="noopener noreferrer" data-i18n="release_btn_latest">
+                下载最新版本
+              </a>
+              <a class="btn btn-secondary" id="releaseAllBtn" href="https://github.com/blackcatfilm/blackcat-media-client/releases" target="_blank" rel="noopener noreferrer" data-i18n="release_btn_all">
+                查看全部 Releases
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -276,6 +318,7 @@
       <div class="footer-links">
         <a href="https://github.com/blackcatfilm/blackcat-media-client" target="_blank" rel="noopener noreferrer">GitHub</a>
         <a href="https://github.com/blackcatfilm/blackcat-media-client/releases" target="_blank" rel="noopener noreferrer">Releases</a>
+        <a href="https://blackcatfilm.github.io/blackcat-media-client/" target="_blank" rel="noopener noreferrer">Pages</a>
       </div>
     </div>
   </footer>
