@@ -35,6 +35,18 @@ BlackCat Media Client is the official client release repository for BlackCat Med
   <p align="center">
   <img src="assets/6.jpg" alt="BlackCat Media Detail" width="98%" />
   </p>
+    <p align="center">
+  <img src="assets/7.jpg" alt="BlackCat Media Detail" width="98%" />
+  </p>
+    <p align="center">
+  <img src="assets/8.jpg" alt="BlackCat Media Detail" width="98%" />
+  </p>
+    <p align="center">
+  <img src="assets/9.jpg" alt="BlackCat Media Detail" width="98%" />
+  </p>
+    <p align="center">
+  <img src="assets/10.jpg" alt="BlackCat Media Detail" width="98%" />
+  </p>
 - Android
 - Android TV
 
