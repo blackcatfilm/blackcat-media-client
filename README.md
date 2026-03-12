@@ -76,7 +76,7 @@ BlackCat Media Client is the official client release repository for BlackCat Med
 
 ## 功能亮点 | Key Features
 
-- 现代化深色界面 / Modern dark UI
+- 现代化星空深色界面 / Modern dark UI
 - Apple TV 风格视觉体验 / Apple-TV inspired visual experience
 - 多平台支持 / Cross-platform support
 - 收藏与搜索 / Favorites and search
@@ -84,7 +84,7 @@ BlackCat Media Client is the official client release repository for BlackCat Med
 - 字幕兼容优化 / Improved subtitle compatibility
 - 更稳定的播放体验 / More stable playback experience
 - 节点 / 线路切换支持 / Node switching support
-
+- 播放时自动根据地区优选最佳线路
 ---
 
 ## 下载 | Download
@@ -96,7 +96,7 @@ BlackCat Media Client is the official client release repository for BlackCat Med
 
 ## 说明 | Notes
 
-该仓库可以作为 BlackCat Media Client 的官方公开发布渠道。  
+该仓库为 BlackCat Media Client 的官方公开发布渠道。  
 This repository can serve as the official public release channel for BlackCat Media Client.
 
 ---
