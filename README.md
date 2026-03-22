@@ -74,7 +74,30 @@ BlackCat Media Client is the official client release repository for BlackCat Med
   <img src="assets/20.jpg" alt="BlackCat Media Home" width="98%" />
             </p>
 - Android TV
-
+<p align="center">
+  <img src="assets/tv1.jpg" alt="BlackCat Media Home" width="98%" />
+  </p>
+  <p align="center">
+  <img src="assets/tv2.jpg" alt="BlackCat Media Detail" width="98%" />
+      </p>
+<p align="center">
+  <img src="assets/tv3.jpg" alt="BlackCat Media Home" width="98%" />
+  </p>
+  <p align="center">
+  <img src="assets/tv5.jpg" alt="BlackCat Media Detail" width="98%" />
+</p>
+<p align="center">
+  <img src="assets/tv6.jpg" alt="BlackCat Media Home" width="98%" />
+  </p>
+  <p align="center">
+  <img src="assets/tv7.jpg" alt="BlackCat Media Detail" width="98%" />
+  </p>
+    <p align="center">
+  <img src="assets/tv8.jpg" alt="BlackCat Media Detail" width="98%" />
+  </p>
+    <p align="center">
+  <img src="assets/tv9.jpg" alt="BlackCat Media Detail" width="98%" />
+  </p>
 ---
 
 ## 功能亮点 | Key Features
